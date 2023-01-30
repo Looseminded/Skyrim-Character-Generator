@@ -4,6 +4,7 @@
 import string
 import random
 import os
+import time
 
 system_random = random.SystemRandom()
 
@@ -58,6 +59,7 @@ def main():
 			fo.write("Murder Targets: " + chosenMurder + "\n")
 			fo.close()
 			print("\nFile saved as " + filename + ".txt at " + str(os.getcwd()))
+			time.sleep(10)
 			exit()
 		elif(save == 'n'):
 			exit()
