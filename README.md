@@ -11,6 +11,6 @@ If running this via double-clicking:
   
   Program will operate as expected.
 
-In either case, your terminal or command prompt will hang for 10 seconds as a result of time.sleep(10) at the end.
+In either case, your terminal or command prompt will hang for 10 seconds as a result of time.sleep(10) at the end if you have chosen to save your generated stats.
 
 This is intentional so that users have time to see where their file has been saved.
