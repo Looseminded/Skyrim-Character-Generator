@@ -1,6 +1,8 @@
 # Skyrim-Character-Generator
 Offline character generator for Skyrim with file-saving functionality.  Written in Python.  Tested on both Windows and Debian-based Linux Systems.
 
+Python 3.7.7 or later is required to run this.
+
 If running this from command line:
 
   python skyrimGenerator.py
