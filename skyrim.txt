@@ -1,0 +1,44 @@
+Race: Altmer (High Elf)
+Birthsign: Steed
+Skills to focus: ['Illusion', 'Lockpicking', 'Pickpocket', 'Conjuration', 'Smithing']
+Factions required: ['The Coven of Namira', 'House Telvanni']
+Civil War Side: Stormcloaks
+Weapons to use: ['War Axes and Battleaxes', 'Bows and Crossbows', 'Maces and Warhammers']
+Shields available: Light
+Armor available: Clothes
+Dawnguard Side: Volkihar
+Player home: Vlindrel Hall (Markarth)
+Companion: Ria
+Freelance Theft: When Provoked
+Murder Targets: Never
+
+Difficulty: Legendary
+Starting Dragon Souls: 4
+Modified Health: -10
+Modified Heal Rate: 0.11%
+Modified Heal Mult: -15%
+Modified Stamina: 16
+Modified Stamina Rate: -0.11%
+Modified Stamina Mult: 23%
+Modified Magicka: -15
+Modified Magicka Rate: -0.14%
+Modified Magicka Mult: 7%
+Modified Speed: 13%
+Modified Weapon Speed: 1.09
+Modified Attack Damage: -0.14%
+Modified Crit Chance: 4%
+Modified Unarmed Damage: 2
+Modified Shout Recovery Mult: -0.01
+Modified Alteration Power: -4%
+Modified Conjuration Power: 15%
+Modified Destruction Power: 2%
+Modified Illusion Power: -5%
+Modified Restoration Power: 15%
+Modified Enchanting Power: -24%
+Modified Disease Resist: 4%
+Modified Poison Resist: 3%
+Modified Fire Resist: 0%
+Modified Shock Resist: -2%
+Modified Frost Resist: -3%
+Modified Magic Resist: 8%
+Modified Absorb Chance: 1%
