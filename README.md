@@ -19,4 +19,4 @@ This is intentional so that users have time to see where their file has been sav
 
 This has been written with the option of minorRolls.py being entirely optional.  If minorRolls does not exist, the program will skip over that functionality entirely.
 
-skyrim.txt and skyrimModified.txt have been provided as examples of what output will look like.
+skyrim.txt and skyrimModified.txt have been provided as examples of what output will look like.  It is not necessary that they exist prior to running the script.
