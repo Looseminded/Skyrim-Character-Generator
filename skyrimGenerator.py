@@ -76,7 +76,7 @@ def main():
 					frost = minorRolls.chooseFrost()
 					magic = minorRolls.chooseMagic()
 					absorb = minorRolls.chooseAbsorb()
-					print(f"Difficulty: " + diff)
+					print(f"Difficulty: {diff}")
 					print(f"Starting Dragon Souls: {startDS}")
 					print(f"Modified Health: {health}")
 					print(f"Modified Heal Rate: {healRate}%")
