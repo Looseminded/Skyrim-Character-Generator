@@ -60,6 +60,10 @@ def main():
 					speed = minorRolls.chooseSpeed()
 					wSpeed = minorRolls.chooseWSpeed()
 					aDamage = minorRolls.chooseADamage()
+					if(aDamage):
+						aDamagePercentRaw = float(aDamage)
+						aDamagePercentRaw *= 100
+						aDamagePercent = "{:.2f}".format(aDamagePercentRaw)
 					crit = minorRolls.chooseCrit()
 					unarmed = minorRolls.chooseUnarmed()
 					shoutMult = minorRolls.chooseShoutMult()
@@ -89,7 +93,7 @@ def main():
 					print(f"Modified Magicka Mult: {magickaMult}%")
 					print(f"Modified Speed: {speed}%")
 					print(f"Modified Weapon Speed: {wSpeed}")
-					print(f"Modified Attack Damage: {aDamage}%")
+					print(f"Modified Attack Damage: {aDamagePercent}%")
 					print(f"Modified Crit Chance: {crit}%")
 					print(f"Modified Unarmed Damage: {unarmed}")
 					print(f"Modified Shout Recovery Mult: {shoutMult}")
@@ -153,7 +157,7 @@ def main():
 				fo.write(f"\nModified Magicka Mult: {magickaMult}%")
 				fo.write(f"\nModified Speed: {speed}%")
 				fo.write(f"\nModified Weapon Speed: {wSpeed}")
-				fo.write(f"\nModified Attack Damage: {aDamage}%")
+				fo.write(f"\nModified Attack Damage: {aDamagePercent}%")
 				fo.write(f"\nModified Crit Chance: {crit}%")
 				fo.write(f"\nModified Unarmed Damage: {unarmed}")
 				fo.write(f"\nModified Shout Recovery Mult: {shoutMult}")
