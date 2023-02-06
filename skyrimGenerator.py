@@ -12,6 +12,7 @@ system_random = random.SystemRandom()
 
 def main():
 	try:
+		skillValue = random.randint(1, 3)
 		chosenRace = chooseRace()
 		chosenBirthsign = chooseBirthsign()
 		chosenFocus = chooseFocus()
@@ -25,6 +26,10 @@ def main():
 		chosenFollower = chooseFollower()
 		chosenTheft = chooseTheft()
 		chosenMurder = chooseMurder()
+		chosenMajorQuestFinish = chooseMajorQuestFinish()
+		chosenMinorQuestFinish = chooseMinorQuestFinish()
+		chosenSkillLevelFinish = chooseSkillLevelFinish()
+		chosenMiscFinish = chooseMiscFinish()
 		print(f"Race: {chosenRace}")
 		print(f"Birthsign: {chosenBirthsign}")
 		print(f"Skills to focus: {chosenFocus}")
@@ -37,13 +42,17 @@ def main():
 		print(f"Player home: {chosenHome}")
 		print(f"Companion: {chosenFollower}")
 		print(f"Freelance Theft: {chosenTheft}")
-		print(f"Murder Targets: {chosenMurder}")
+		print(f"Murder Targets: {chosenMurder}\n")
+		print(f"Playthrough can be considered completed when: {chosenMajorQuestFinish} has been completed.")
+		print(f"A combined total of {chosenMinorQuestFinish} miscellaneous objectives,\nside quests, faction quests, and Daedric quests have been completed.")
+		print(f"At least {skillValue} of your focused skills are at level {chosenSkillLevelFinish}.")
+		print(f"You have obtained the following: {chosenMiscFinish}")
 		print(f"\n")
 		
 		if(path.is_file()):
 			minor = input("Would you like to roll additional or lower minor stats and difficulty?\n(Health, regen rate, damage, etc.) (y/n)\n")
 		
-			if(minor is 'y'):
+			if(minor is 'y' or minor is 'Y'):
 				try:
 					import minorRolls
 					diff = minorRolls.chooseDifficulty()
@@ -114,7 +123,7 @@ def main():
 					print(f"File does not exist or something is broken.  Skipping...")
 					print(e)
 					pass
-			elif(minor is 'n'):
+			elif(minor is 'n' or minor is 'N'):
 				pass
 			else:
 				print(f"Invalid input, passing.\n")
@@ -123,7 +132,7 @@ def main():
 		
 		save = input("Would you like to save your results to a file? (y/n)\n")
 		
-		if(save is 'y'):
+		if(save is 'y' or save is 'Y'):
 			filename = input("\nPlease type the name you'd like to save your file as: \n")
 			fo = open(filename + ".txt", "w")
 			fo.write(f"Race: {chosenRace}\n")
@@ -138,11 +147,15 @@ def main():
 			fo.write(f"Player home: {chosenHome}\n")
 			fo.write(f"Companion: {chosenFollower}\n")
 			fo.write(f"Freelance Theft: {chosenTheft}\n")
-			fo.write(f"Murder Targets: {chosenMurder}\n")
-			print(f"\nFile saved as {filename}.txt at {os.getcwd()}")
+			fo.write(f"Murder Targets: {chosenMurder}\n\n")
+			fo.write(f"Playthrough can be considered completed when: {chosenMajorQuestFinish} has been completed.\n")
+			fo.write(f"A combined total of {chosenMinorQuestFinish} miscellaneous objectives,\nside quests, faction quests, and Daedric quests have been completed.\n")
+			fo.write(f"At least {skillValue} of your focused skills are at level {chosenSkillLevelFinish}.\n")
+			fo.write(f"You have obtained the following: {chosenMiscFinish}.\n")
 			fo.close()
+			print(f"\nFile saved as {filename}.txt at {os.getcwd()}")
 			time.sleep(3)
-			if(minor is 'y'):
+			if(minor is 'y' or minor is 'Y'):
 				fo = open(filename + ".txt", "a")
 				fo.write(f"\nDifficulty: {diff}")
 				fo.write(f"\nStarting Dragon Souls: {startDS}")
@@ -177,7 +190,7 @@ def main():
 				fo.close()
 				
 				makefile = input("\nWould you like to generate a .txt file to run in Skyrim's\nconsole to make the changes for you? (y/n)\n")
-				if(makefile is 'y'):
+				if(makefile is 'y' or makefile is 'Y'):
 					fname = "skyrimModified.txt"
 					fi = open(fname, "w")
 					fi.write(f"player.modav dragonsouls {startDS}")
@@ -220,7 +233,7 @@ def main():
 				pass
 			time.sleep(5)
 			exit()
-		elif(save is 'n'):
+		elif(save is 'n' or save is 'N'):
 			exit()
 	except ValueError as v:
 		print(f"Something's not right...")
@@ -240,13 +253,13 @@ def chooseFocus():
 	countFocus = entryLoop()
 	pickedFocus = ''
 	skillList = ['Alteration', 'Conjuration', 'Destruction', 'Enchanting', 'Illusion', 'Restoration', 'Archery', 'Block', 'Heavy Armor', 'One-Handed', 'Smithing', 'Two-Handed', 'Alchemy', 'Light Armor', 'Lockpicking', 'Pickpocket', 'Sneak', 'Speech']
-	pickedFocus = random.sample(skillList, countFocus)
+	pickedFocus = system_random.sample(skillList, countFocus)
 	return pickedFocus
 	
 def chooseFactions():
 	x = random.randint(2, 5)
 	factionList = ['Bards College', 'The Blades', 'The Greybeards', 'College of Winterhold', 'The Companions', 'The Coven of Namira', 'House Telvanni', 'The Dark Brotherhood', 'The Nightingales (Thieves\' Guild)', 'Tribal Orcs']
-	pickedFactions = random.sample(factionList, x)
+	pickedFactions = system_random.sample(factionList, x)
 	return pickedFactions
 	
 def chooseWar():
@@ -257,7 +270,7 @@ def chooseWar():
 def chooseWeapons():
 	x = random.randint(2, 3)
 	weaponsList = ['Bows and Crossbows', 'Daggers', 'Maces and Warhammers', 'Swords and Greatswords', 'War Axes and Battleaxes', 'Destruction Magic', 'Conjuration Magic', 'Restoration Magic']
-	pickedWeapons = random.sample(weaponsList, x)
+	pickedWeapons = system_random.sample(weaponsList, x)
 	return pickedWeapons
 	
 def chooseShields():
@@ -297,6 +310,25 @@ def chooseMurder():
 	pickedMurder = system_random.choice(murderList)
 	return pickedMurder
 	
+def chooseMajorQuestFinish():
+	majorQuestFinishList = ['Dragonslayer', 'Kindred Judgment', 'At the Summit of Apocrypha']
+	pickedMajorQuestFinish = system_random.choice(majorQuestFinishList)
+	return pickedMajorQuestFinish
+	
+def chooseMinorQuestFinish():
+	minorQuestFinishValue = random.randint(350, 700)
+	return minorQuestFinishValue
+	
+def chooseSkillLevelFinish():
+	skillLevelFinishValue = random.randint(85, 100)
+	return skillLevelFinishValue
+	
+def chooseMiscFinish():
+	x = random.randint(2, 5)
+	miscFinishList = [f'Carry at least {random.randint(65000, 150000)} gold at one time', f'Learn {random.randint(5, 25)} shouts', f'Learn {random.randint(25, 75)} spells', f'Discover {random.randint(150, 300)} locations', f'Read {random.randint(100, 250)} books']
+	pickedMiscFinish = system_random.sample(miscFinishList, x)
+	return pickedMiscFinish
+
 def entryLoop():
 	countFocus = 0
 	countFocus = int(input("How many skills would you like to focus on? (Between 3 and 6)\n"))

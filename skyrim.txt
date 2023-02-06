@@ -1,44 +1,50 @@
-Race: Altmer (High Elf)
-Birthsign: Lord
-Skills to focus: ['Enchanting', 'One-Handed', 'Alteration', 'Destruction', 'Pickpocket']
-Factions required: ['College of Winterhold', 'House Telvanni', 'The Coven of Namira', 'The Companions', 'The Greybeards']
+Race: Khajiit
+Birthsign: Warrior
+Skills to focus: ['Two-Handed', 'Sneak', 'Conjuration', 'Illusion', 'Restoration']
+Factions required: ['College of Winterhold', 'House Telvanni', "The Nightingales (Thieves' Guild)", 'Tribal Orcs']
 Civil War Side: Imperials
 Weapons to use: ['Maces and Warhammers', 'Destruction Magic']
-Shields available: Light
-Armor available: Robes
-Dawnguard Side: Volkihar
-Player home: Windstad Manor (Morthal)
-Companion: Aranea Ienith
-Freelance Theft: When Required
-Murder Targets: Always (Player's Choice)
+Shields available: Heavy
+Armor available: Light Armor
+Dawnguard Side: Player's choice
+Player home: Lakeview Manor (Falkreath)
+Companion: Torvar
+Freelance Theft: Habitual
+Murder Targets: Avoid if Possible
 
-Difficulty: Master
+Playthrough can be considered completed when: Kindred Judgment has been completed.
+A combined total of 697 miscellaneous objectives,
+side quests, faction quests, and Daedric quests have been completed.
+At least 1 of your focused skills are at level 86.
+You have obtained the following: ['Learn 45 spells', 'Discover 261 locations', 'Learn 24 shouts'].
+
+Difficulty: Legendary
 Starting Dragon Souls: 0
-Modified Health: 11
-Modified Heal Rate: 0.01%
-Modified Heal Mult: -21%
-Modified Stamina: 0
-Modified Stamina Rate: -0.17%
-Modified Stamina Mult: -2%
-Modified Magicka: 10
-Modified Magicka Rate: 0.18%
-Modified Magicka Mult: 25%
-Modified Speed: 3%
-Modified Weapon Speed: 0.94
-Modified Attack Damage: -30.00%
-Modified Crit Chance: 3%
-Modified Unarmed Damage: 3
-Modified Shout Recovery Mult: -0.27
-Modified Alteration Power: 3%
-Modified Conjuration Power: 5%
-Modified Destruction Power: 14%
-Modified Illusion Power: -11%
-Modified Restoration Power: -6%
-Modified Enchanting Power: -10%
-Modified Disease Resist: 4%
+Modified Health: -10
+Modified Heal Rate: 0.17%
+Modified Heal Mult: 25%
+Modified Stamina: 6
+Modified Stamina Rate: 0.08%
+Modified Stamina Mult: 1%
+Modified Magicka: -13
+Modified Magicka Rate: 0.19%
+Modified Magicka Mult: -30%
+Modified Speed: 7%
+Modified Weapon Speed: 1.17
+Modified Attack Damage: 33.00%
+Modified Crit Chance: 9%
+Modified Unarmed Damage: 7
+Modified Shout Recovery Mult: -0.06
+Modified Alteration Power: 0%
+Modified Conjuration Power: 4%
+Modified Destruction Power: -9%
+Modified Illusion Power: 8%
+Modified Restoration Power: 4%
+Modified Enchanting Power: 23%
+Modified Disease Resist: -10%
 Modified Poison Resist: -1%
-Modified Fire Resist: -7%
-Modified Shock Resist: 0%
-Modified Frost Resist: 9%
-Modified Magic Resist: -7%
-Modified Absorb Chance: 1%
+Modified Fire Resist: -4%
+Modified Shock Resist: -8%
+Modified Frost Resist: 8%
+Modified Magic Resist: 9%
+Modified Absorb Chance: 5%
