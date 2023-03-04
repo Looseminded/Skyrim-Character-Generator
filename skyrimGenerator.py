@@ -325,7 +325,7 @@ def chooseSkillLevelFinish():
 	
 def chooseMiscFinish():
 	x = random.randint(2, 5)
-	miscFinishList = [f'Carry at least {random.randint(65000, 150000)} gold at one time', f'Learn {random.randint(5, 25)} shouts', f'Learn {random.randint(25, 75)} spells', f'Discover {random.randint(150, 300)} locations', f'Read {random.randint(100, 250)} books']
+	miscFinishList = [f'Carry at least {random.randint(65000, 150000)} gold at one time', f'Master {random.randint(5, 25)} shouts', f'Learn {random.randint(25, 75)} spells', f'Discover {random.randint(150, 300)} locations', f'Read {random.randint(100, 250)} books']
 	pickedMiscFinish = system_random.sample(miscFinishList, x)
 	return pickedMiscFinish
 
