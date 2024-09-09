@@ -3,6 +3,8 @@ Offline character generator for Skyrim with file-saving functionality.  Written 
 
 Python 3.7.7 or later is required to run this.
 
+If running Python 3.11.5, you will receive syntax errors in several lines regarding the use of "is" rather than "==". This will still operate as expected.
+
 If running this from command line:
 
   python skyrimGenerator.py
